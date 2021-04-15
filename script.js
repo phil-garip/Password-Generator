@@ -1,13 +1,15 @@
-//welcome user
-alert("Welcome.");
+var letters = ["abcdefghijklmnop"];
+var numbers = [0,1,2,3,4,5,6,7,8,9];
+var spCharacters = ["!@#$%^&*"];
+
+//Welcome user
+alert("Welcome! Time to generate a password!");
+
+//
 
 
 
 // Assignment Code
-
-var letters = ["abcdefghijklmnop"];
-var numbers = [0,1,2,3,4,5,6,7,8,9];
-var spCharacters = ["!@#$%^&*"];
 
 var generateBtn = document.querySelector("#generate");
 
