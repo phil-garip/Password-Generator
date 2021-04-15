@@ -9,7 +9,6 @@ var numArr = numbers.split("");
 var spCharacters = "!@#$%^&*().,/?`~-+=[]{}";
 var spCharacterArr = spCharacters.split("");
 var userArray = [];
-var pwArray = [];
 
 
 // Dependencies ===========================================
@@ -22,6 +21,7 @@ var pwArray = [];
   function getUserLength() {
     var userLength = prompt("how many characters? Please enter a number between 8 and 128");
     if (userLength > 7 && userLength < 129) {
+      return 
     } else {
       alert("Invalid number. Please try again.")
       getUserLength();
@@ -30,29 +30,30 @@ var pwArray = [];
 
   function getUserUpper() {
     var userUpper = confirm("Would you like uppercase letters?");
+    console.log()
     if (userUpper) {
-      userArray.push(userArray.concat(abcUpperArr));
+    userArray = userArray.concat(abcUpperArr);
     } 
   }
 
   function getUserLower() {
     var userLower = confirm("would you like lowercase letters?");
     if (userLower) {
-      userArray.push(userArray.concat(abcLowerArr));
+      userArray = userArray.concat(abcLowerArr);
     } 
   }
 
   function getUserNums() {
     var userNums = confirm("Would you like numbers?");
     if (userNums) {
-      userArray.push(userArray.concat(numArr));
+      userArray = userArray.concat(numArr);
     } 
   }
 
   function getUserSpecials() { 
     var userSpecial = confirm("Would you like special characters?");
     if (userSpecial) {
-      userArray.push(userArray.concat(spCharacterArr));
+      userArray = userArray.concat(spCharacterArr);
     }
   }
 
@@ -63,10 +64,9 @@ function getUserChoices(){
   getUserLower();
   getUserNums();
   getUserSpecials();
-  
 }
   getUserChoices();
-  console.log(pwArray.concat(userArray));
+  console.log(userArray);
     
     
     // function getUserChoices() {
