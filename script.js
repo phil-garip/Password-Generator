@@ -12,7 +12,9 @@ var spCharacterArr = spCharacters.split("");
 
 
 //Functions
-function generatePassword()
+function generatePassword() {
+  return password;
+}
 
 
 
