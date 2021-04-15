@@ -1,5 +1,5 @@
 //welcome user
-alert("Welcome!");
+alert("Welcome.");
 
 
 
