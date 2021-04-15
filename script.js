@@ -9,8 +9,10 @@ var numArr = numbers.split("");
 var spCharacters = ["!@#$%^&*().,/?`~-+=[]{}"];
 var spCharacterArr = spCharacters.split("");
 
-//Functions
 
+
+//Functions
+function generatePassword()
 
 
 
