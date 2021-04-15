@@ -1,15 +1,18 @@
-//welcome user
-alert("Welcome!");
-
-
-
-// Assignment Code
-
-var letters = ["abcdefghijklmnop"];
-var numbers = [0,1,2,3,4,5,6,7,8,9];
-var spCharacters = ["!@#$%^&*"];
-
+//Starting Data
 var generateBtn = document.querySelector("#generate");
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var abcUpperArr = abcUpper.split("");
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
+var abcLowerArr = abcLower.split("");
+var numbers = ["0123456789"];
+var numArr = numbers.split("");
+var spCharacters = ["!@#$%^&*().,/?`~-+=[]{}"];
+var spCharacterArr = spCharacters.split("");
+
+//Functions
+
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -21,5 +24,19 @@ function writePassword() {
 
 }
 
+//User Interractions
+//a user clicks generate password
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Initializations
+
+
+
+// Assignment Code
+
+var generateBtn = document.querySelector("#generate");
+
+
+
+
