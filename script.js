@@ -11,9 +11,11 @@ var spCharacterArr = spCharacters.split("");
 var userArray = [];
 var pwArray = [];
 var pwLength = 0;
-  
+
+// Functions ===================================================================
+
   function getUserLength() {
-    var userLength = prompt("how many characters? Please enter a number between 8 and 128");
+    var userLength = prompt("How many characters? Please enter a number between 8 and 128");
     if (userLength > 7 && userLength < 129) {
       pwLength = userLength
     } else {
@@ -31,7 +33,7 @@ var pwLength = 0;
   }
 
   function getUserLower() {
-    var userLower = confirm("would you like lowercase letters?");
+    var userLower = confirm("Would you like lowercase letters?");
     if (userLower) {
       userArray = userArray.concat(abcLowerArr);
     } 
@@ -52,23 +54,9 @@ var pwLength = 0;
   }
 
 
-function getUserChoices() {
-  getUserLength();
-  getUserUpper();
-  getUserLower();
-  getUserNums();
-  getUserSpecials();
-}
-  getUserChoices();
-
-
-// Dependencies (HTML Elements, Libraries, etc.) ==============
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Starting Data =====================================================
-
-// Functions =========================================================
 function generatePassword() {
   for (var i = 0; i < pwLength; i++) {
     pwArray.push(userArray[Math.floor(Math.random() * userArray.length)]);
@@ -92,3 +80,12 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // Initialization ====================================================
+
+function getUserChoices() {
+  getUserLength();
+  getUserUpper();
+  getUserLower();
+  getUserNums();
+  getUserSpecials();
+}
+  getUserChoices();
