@@ -9,19 +9,19 @@ var numArr = numbers.split("");
 var spCharacters = "!@#$%^&*().,/?`~-+=[]{}";
 var spCharacterArr = spCharacters.split("");
 var userArray = [];
-
+var pwArray = [];
+var pwLength = 0;
 
 // Dependencies ===========================================
   // generate button
 
 // Functions ===============================================
   // generate password
-  function generatePassword() {}
   
   function getUserLength() {
     var userLength = prompt("how many characters? Please enter a number between 8 and 128");
     if (userLength > 7 && userLength < 129) {
-      return 
+      pwLength = userLength
     } else {
       alert("Invalid number. Please try again.")
       getUserLength();
@@ -58,7 +58,7 @@ var userArray = [];
   }
 
 
-function getUserChoices(){
+function getUserChoices() {
   getUserLength();
   getUserUpper();
   getUserLower();
@@ -66,7 +66,20 @@ function getUserChoices(){
   getUserSpecials();
 }
   getUserChoices();
-  console.log(userArray);
+  
+ 
+  var password = userArray[Math.floor(Math.random() * userArray.length)];
+  
+  for (var i = 0; i < pwLength; i++) {
+    pwArray.push(i);
+  }
+
+  console.log(pwLength, pwArray, password);
+
+
+  
+
+
     
     
     // function getUserChoices() {
@@ -126,46 +139,20 @@ function getUserChoices(){
   // user clicks to generate password
 
 
+// Dependencies (HTML Elements, Libraries, etc.) ==============
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
+// Starting Data =====================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Functions
-var randomList = [];
+// Functions =========================================================
 function generatePassword() {
-  //confirm spCharacters
-  var confirmSpecial = confirm("Would you like special characters?")
-  //add random special caharacter to list
-  if (confirmSpecial === true) {
-    randomList.charAt(Math.floor(Math.random() * randomList.length));
-  }
+  return "a string"
 }
-
 
 
 // Write password to the #password input
 function writePassword() {
-
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -173,19 +160,9 @@ function writePassword() {
 
 }
 
-//User Interractions
-//a user clicks generate password
+// User Interactions =================================================
+// a user clicks generate password
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//Initializations
-
-
-
-// Assignment Code
-
-var generateBtn = document.querySelector("#generate");
-
-
-
-
+// Initialization ====================================================
